@@ -20,16 +20,12 @@ export class AppComponent {
   });
 
   loadApiData(){
-    this.registrationForm.setValue({
+    this.registrationForm.patchValue({
       userName: 'Harsh',
       password:'12345',
       confirmpassword: '12345',
-      address: {
-        State: 'something 123',
-        City: 'muzaffarnagar',
-        Pin:'251001'
-      }
 
+      // in this case if we use Setvalue it will give error to pass address also
     })
   }
 }
