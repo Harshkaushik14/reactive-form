@@ -6,8 +6,9 @@
 
   <form [formGroup]="registrationForm">
 <div class="mb-3 form-group">
-  <label for="" class="form-label">Username</label>
-  <input type="email" class="form-control" formControlName="userName" name="" id="" aria-describedby="emailHelpId" placeholder="enter your email">
+  <label class="form-label">Username</label>
+  <input [class.is-invalid]="registrationForm.get('userName').invalid && 
+  registrationForm.get('userName').touched" type="email" class="form-control" formControlName="userName" placeholder="enter your Name">
   <small id="emailHelpId" class="form-text text-muted d-none">Please Enter a valid Email</small>
 </div>
 
