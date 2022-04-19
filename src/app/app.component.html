@@ -1,3 +1,6 @@
+<!-- nesting forms groups in component.ts file -->
+{{registrationForm.value | json}}
+<hr>
 <div class="container-fluid">
   <h2>Reactive Form</h2>
 
@@ -8,7 +11,7 @@
   <small id="emailHelpId" class="form-text text-muted d-none">Please Enter a valid Email</small>
 </div>
 
-  <div class="mb-3 form-group">
+<div class="mb-3 form-group">
     <label  class="form-label">Password</label>
     <input type="password" formControlName="password" class="form-control" placeholder="please enter your password">
   </div>
@@ -17,6 +20,25 @@
     <label class="form-label">Confirm Password</label>
     <input type="password" formControlName="confirmpassword" class="form-control" placeholder="please enter your password">
   </div>
-  </form>
-{{registrationForm.value | json}}
+
+
+
+<hr>
+<div formGroupName="address">
+<div class="mb-3 form-group" >
+  <label  class="form-label">City</label>
+  <input type="text" class="form-control" formControlName="City"  placeholder="enter your address">
+</div>
+
+  <div class="mb-3 form-group">
+    <label  class="form-label">State</label>
+    <input type="text"  class="form-control" formControlName="State" placeholder="please enter your state">
+  </div>
+
+  <div class="mb-3 form-group">
+    <label class="form-label">PIN</label>
+    <input type="text"  class="form-control" formControlName="Pin" placeholder="please enter your PIN Code">
+  </div>
+  </div>
+</form>
 </div>
